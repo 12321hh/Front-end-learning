@@ -58,7 +58,7 @@
 
 /* 输入框聚焦样式（提升体验） */
 .form-item input:focus {
-  border-color: #409eff; /* 蓝色边框 */
+  border-color: #4ef765; /* 蓝色边框 */
   box-shadow: 0 0 5px rgba(64, 158, 255, 0.2);
 }
 
@@ -66,7 +66,7 @@
 .login-btn {
   width: 100%;
   padding: 12px;
-  background-color: #409eff; /* 主流蓝色 */
+  background-color: #4ef765; /* 主流蓝色 */
   color: white;
   border: none;
   border-radius: 4px;
@@ -77,7 +77,7 @@
 
 /* 按钮hover效果 */
 .login-btn:hover {
-  background-color: #337ecc;
+  background-color: #30e047;
 }
 
 /* 错误提示 */
@@ -92,7 +92,7 @@
 /* --------------------- 首页样式 --------------------- */
 /* 首页导航栏 */
 .home-nav {
-  background-color: #409eff;
+  background-color: #40ff79;
   color: white;
   padding: 15px 20px;
   display: flex;
@@ -104,7 +104,7 @@
 .logout-btn {
   padding: 6px 12px;
   background-color: white;
-  color: #409eff;
+  color: #4ef765;
   border: none;
   border-radius: 4px;
   cursor: pointer;
