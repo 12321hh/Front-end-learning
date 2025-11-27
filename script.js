@@ -1,12 +1,11 @@
 // ------------- 登录逻辑（index.html）-------------
 // 页面加载完成后执行
 window.onload = function() {
-  // 1. 先判断当前页面是否是登录页
-  if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
+  // 优先通过元素存在判断页面类型（适配 GitHub Pages 子路径）
+  if (document.getElementById('loginForm')) {
     initLogin();
   }
-  // 2. 如果是首页，校验登录状态
-  if (window.location.pathname.includes('home.html')) {
+  if (document.getElementById('showUsername')) {
     checkLoginStatus();
   }
 };
@@ -30,7 +29,7 @@ function initLogin() {
 
     // 2. 表单验证（非空）
     if (!username) {
-      errorTip.textContent = '请输入用户名！';
+      errorTip.textContent = '请输入账号名称！';
       return; // 验证失败，终止执行
     }
     if (!password) {
