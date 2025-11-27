@@ -45,7 +45,8 @@ function initLogin() {
       localStorage.setItem('username', username); // 存储用户名
 
       // 跳转到首页
-      window.location.href = 'home.html';
+      // 跳转到首页（使用基于当前 location 的绝对 URL，兼容微信内置浏览器）
+      window.location.href = new URL('home.html', location.href).href;
     } else {
       // 登录失败：提示错误
       errorTip.textContent = '用户名或密码错误！';
@@ -60,7 +61,8 @@ function checkLoginStatus() {
   const isLogin = localStorage.getItem('isLogin');
   // 如果未登录，跳回登录页
   if (!isLogin || isLogin !== 'true') {
-    window.location.href = 'index.html';
+    // 使用绝对 URL 跳回登录页
+    window.location.href = new URL('index.html', location.href).href;
     return;
   }
 
@@ -74,7 +76,7 @@ function checkLoginStatus() {
     localStorage.removeItem('isLogin');
     localStorage.removeItem('username');
     // 跳回登录页
-    window.location.href = 'index.html';
+    window.location.href = new URL('index.html', location.href).href;
     alert('退出成功！');
   };
 }
