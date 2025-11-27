@@ -1,0 +1,145 @@
+/* 全局重置：清除默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 登录页背景样式 */
+.login-page {
+  background-color: #f5f7fa; /* 浅灰色背景 */
+  min-height: 100vh; /* 占满屏幕高度 */
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+/* 登录容器 */
+.login-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+  width: 100%;
+  max-width: 400px; /* 最大宽度，适配电脑 */
+}
+
+/* 登录标题 */
+.login-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+/* 表单项（用户名/密码） */
+.form-item {
+  margin-bottom: 20px;
+}
+
+/* 输入框标签 */
+.form-item label {
+  display: block; /* 独占一行 */
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* 输入框样式 */
+.form-item input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none; /* 去掉默认选中边框 */
+}
+
+/* 输入框聚焦样式（提升体验） */
+.form-item input:focus {
+  border-color: #409eff; /* 蓝色边框 */
+  box-shadow: 0 0 5px rgba(64, 158, 255, 0.2);
+}
+
+/* 登录按钮 */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #409eff; /* 主流蓝色 */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer; /* 鼠标变手型 */
+  transition: background-color 0.3s; /*  hover过渡 */
+}
+
+/* 按钮hover效果 */
+.login-btn:hover {
+  background-color: #337ecc;
+}
+
+/* 错误提示 */
+.error-tip {
+  color: #f56c6c; /* 红色 */
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 15px;
+  min-height: 16px; /* 防止提示消失时布局跳动 */
+}
+
+/* --------------------- 首页样式 --------------------- */
+/* 首页导航栏 */
+.home-nav {
+  background-color: #409eff;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between; /* 用户名和退出按钮左右分布 */
+  align-items: center;
+}
+
+/* 退出按钮 */
+.logout-btn {
+  padding: 6px 12px;
+  background-color: white;
+  color: #409eff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background-color: #f5f7fa;
+}
+
+/* 首页内容区 */
+.home-content {
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* 内容居中 */
+}
+
+.home-content h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.home-content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 响应式适配（手机端） */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px 25px;
+    margin: 0 15px; /* 手机端左右留边 */
+  }
+  .home-content {
+    padding: 20px 15px;
+  }
+}

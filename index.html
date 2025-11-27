@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!-- 响应式适配：手机端不缩放 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录页面</title>
+  <!-- 引入通用样式 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <!-- 登录容器（居中显示） -->
+  <div class="login-container">
+    <h2>系统登录</h2>
+    <!-- 登录表单 -->
+    <form id="loginForm" class="login-form">
+      <!-- 用户名输入框 -->
+      <div class="form-item">
+        <label for="username">用户名：</label>
+        <input type="text" id="username" placeholder="请输入用户名" required>
+      </div>
+      <!-- 密码输入框 -->
+      <div class="form-item">
+        <label for="password">密码：</label>
+        <input type="password" id="password" placeholder="请输入密码" required>
+      </div>
+      <!-- 错误提示（默认隐藏） -->
+      <div class="error-tip" id="errorTip"></div>
+      <!-- 登录按钮 -->
+      <button type="submit" class="login-btn">登录</button>
+    </form>
+  </div>
+
+  <!-- 引入逻辑脚本 -->
+  <script src="script.js"></script>
+</body>
+</html>
